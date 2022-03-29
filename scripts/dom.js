@@ -6,3 +6,11 @@ function updateElementDomSpan(id,word) {
         document.querySelector(id).appendChild(span);
     }
 }
+
+function addGuessedLetter(letter, isCorrect) {
+    const span = document.createElement("span");
+    span.textContent = letter;
+    span.style.color = (isCorrect) ? 'green' : 'red';
+    document.querySelector("#letters-tried").appendChild(span);
+
+}
